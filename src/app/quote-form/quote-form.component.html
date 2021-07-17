@@ -1,13 +1,19 @@
 <h1>Share your quote</h1>
- <form action="" (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
-     <label for="name">What is your name?</label>
-     <input type="text" name="" id="name">
+ <form action="" (ngSubmit)='submitQuote()'>
+     <div>
+        <label for="name">What is your name?</label>
+        <input type="text" name="" id="name" [(ngModel)]='newQuote.name' name='name' #name="ngModel">
+     </div>
 
-     <label for="quote">Enter the Quote</label>
-     <textarea name="" id="quote" cols="15" rows="10"></textarea>
+     <div>
+        <label for="quote">Enter the Quote</label>
+        <textarea name="" id="quote" cols="15" rows="10" [(ngModel)]='newQuote.theQuote' name='theQuote' #name="ngModel"></textarea>
+     </div>
 
-     <label for="author"></label>
-     <textarea name="" id="author" cols="30" rows="10"></textarea>
+     <div>
+        <label for="author">Who is the author of the quote?</label>
+        <input type="text" name="" id="author" [(ngModel)]='newQuote.author' name='author' #name="ngModel">
+     </div>
 
      <button type="submit">Add Quote</button>
  </form>

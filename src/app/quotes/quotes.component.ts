@@ -14,11 +14,10 @@ export class QuotesComponent implements OnInit {
     new Quote('Robert Maina', 'The way to get started is to quit talking and begin doing.', 'Walt Disney')
   ];
 
-  
-  addNewQuote(quote: Quote) {
-    
-  }
 
+  addNewQuote(quote: Quote) {
+    this.quotes.push(quote)
+  };
 
 
   ngOnInit(): void {
