@@ -1,1 +1,12 @@
-<p>quotes works!</p>
+<h2>QUOTES</h2>
+<div class="container row"  *ngFor='let quote of quotes; let i= index'>
+    <div class="col-md-2"></div>
+    <div class="col-md-5">
+        <p> "{{ quote.theQuote }}" </p>
+    </div>
+    <div class="col-md-3">
+        <h5>The author of the quote is {{ quote.author }} </h5>
+        <h5>The quote was posted by {{ quote.name }} </h5>
+    </div>
+    <div class="col-md-2"></div>
+</div>
