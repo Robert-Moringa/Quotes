@@ -1,1 +1,7 @@
+<div *ngFor='let quote of quotes; let i= index'>
+    <p>Author: {{ quote.author }} </p>
+    <p>Posted by {{ quote.name }} </p>
+    <p>Published {{ quote.publishedDate|timeAgo }}</p>
+</div>
+
 <button (click)='quoteDelete(true)'>Delete Qoute</button>
