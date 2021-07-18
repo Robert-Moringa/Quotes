@@ -2,7 +2,9 @@
  <form action="" (ngSubmit)='submitQuote()'>
      <div class="column">
         <label for="name">What is your name?</label>
-        <input type="text" name="" id="name" [(ngModel)]='newQuote.name' name='name' #name="ngModel">
+        <div>
+            <input type="text" name="" id="name" [(ngModel)]='newQuote.name' name='name' #name="ngModel">
+        </div>
      </div>
 
      <div class="column">
@@ -14,7 +16,9 @@
 
      <div class="column">
         <label for="author">Who is the author of the quote?</label>
-        <input type="text" name="" id="author" [(ngModel)]='newQuote.author' name='author' #name="ngModel">
+        <div>
+            <input type="text" name="" id="author" [(ngModel)]='newQuote.author' name='author' #name="ngModel">
+        </div>
      </div>
 
      <button type="submit">Add Quote</button>
