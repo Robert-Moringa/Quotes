@@ -3,17 +3,15 @@
 <div class="container row">
    
     <div class=" container row" >
-        <div class="col-md-2">
-            <i (click)='quoteDelete(true)' class="fa fa-trash"></i>
+        <div class="col-md-4">
+            <i (click)='quoteDelete(true)' class="fa fa-trash" style="color: grey;"> <span style="color: rgba(58, 68, 39, 1);" > Delete</span></i>
         </div>
-        <div class="row col-md-5">
-            <button>upvote</button>
-            <p>3 vote</p>
+        <div class="row col-md-4">
+            <i class="fa fa-thumbs-up" style="color: green;"> <span style="color: rgba(58, 68, 39, 1);" > 7 votes</span></i>
         </div>
 
-        <div class="row col-md-5">
-            <button>downvote</button>
-            <p>0 vote</p>
+        <div class="row col-md-4">
+            <i class="fa fa-thumbs-up" style="color: red;"> <span style="color: rgba(58, 68, 39, 1);" > 1 votes</span></i>
         </div>
     </div>
 </div>
