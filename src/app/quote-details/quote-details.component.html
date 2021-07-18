@@ -1,7 +1,14 @@
-<div *ngFor='let quote of quotes; let i= index'>
-    <p>Author: {{ quote.author }} </p>
-    <p>Posted by {{ quote.name }} </p>
-    <p>Published {{ quote.publishedDate|timeAgo }}</p>
+<div class="container row">
+    <div *ngFor='let quote of quotes; let i= index' style="line-break: 1em;">
+        <p>Author: {{ quote.author }} </p>
+        <p>Posted by {{ quote.name }} </p>
+        <p>Published {{ quote.publishedDate|timeAgo }}</p>
+    </div>
+    
+    <div>
+        <button (click)='quoteDelete(true)'>Delete Qoute</button>
+        <div class="row">
+            <button>upvote</button>
+        </div>
+    </div>
 </div>
-
-<button (click)='quoteDelete(true)'>Delete Qoute</button>
