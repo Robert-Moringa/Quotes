@@ -14,8 +14,8 @@
     <div class="col-md-3">
         <img src="./assets/mahatmac.png" alt="Mahatma Gadhi gave inspirational quotes" width="100%">
     </div>
-    <div class="col-md-6" style="border-left: 3px solid rgba(148, 52, 54, 1);">
-        <div *ngFor='let quote of quotes; let i= index'>
+    <div class="col-md-6" style="border-left: 3px solid rgba(148, 52, 54, 1); ">
+        <div *ngFor='let quote of quotes; let i= index' style="border: 2px solid lightgray; padding: 5px 5px; margin-top: 5px;">
             <!-- quote -->
             <div>
                 <h2> "{{ quote.theQuote }}" </h2>
@@ -31,7 +31,6 @@
                 <app-quote-details  [quotes]='quotes' (isDelete)='toDelete($event,i)'></app-quote-details>
             </div>
             
-            <div></div>
         </div>
         
         <app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form>
