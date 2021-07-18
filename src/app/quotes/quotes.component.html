@@ -3,6 +3,7 @@
     <div class="col-md-2"></div>
     <div class="col-md-5">
         <p> "{{ quote.theQuote }}" </p>
+        <app-quote-details  [quotes]='quotes' (isDelete)='toDelete($event,i)'></app-quote-details>
     </div>
     <div class="col-md-3">
         <h5>Author: {{ quote.author }} </h5>
@@ -13,3 +14,5 @@
 </div>
 
 <app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form>
+
+
