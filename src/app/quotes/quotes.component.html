@@ -16,22 +16,23 @@
         <img src="./src/assets/mahatmac.png" alt="">
     </div>
     <div class="col-md-5">
-        <div class="container"  *ngFor='let quote of quotes; let i= index'>
+        <div *ngFor='let quote of quotes; let i= index'>
             <div>
                 <p> "{{ quote.theQuote }}" </p>
 
-                
+
             </div>
             <div>
-                
+                <div>
+                    <h5>Author: {{ quote.author }} </h5>
+                    <h5>Posted by {{ quote.name }} </h5>
+                    <p>Published {{ quote.publishedDate|timeAgo }} ago </p>
+                </div>
                 <app-quote-details  [quotes]='quotes' (isDelete)='toDelete($event,i)'></app-quote-details>
+
             </div>
-            <div class="col-md-3">
-                <h5>Author: {{ quote.author }} </h5>
-                <h5>Posted by: {{ quote.name }} </h5>
-                <p>Published: {{ quote.publishedDate|timeAgo }} </p>
-            </div>
-            <div class="col-md-2"></div>
+            
+            <div></div>
         </div>
     </div>
     <div class="col-md-3"></div>
@@ -45,5 +46,6 @@
 
 
 <app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form>
+
 
 
