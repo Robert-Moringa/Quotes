@@ -8,14 +8,13 @@
     </div>
 </header>
 
-<hr style="color: rgba(148, 52, 54, 1);">
 
 <div class="container row">
     <div class="col-md-1"></div>
     <div class="col-md-3">
         <img src="./assets/mahatmac.png" alt="I was here" width="100%">
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6" style="border-left: 3px solid rgba(148, 52, 54, 1);">
         <div *ngFor='let quote of quotes; let i= index'>
             <!-- quote -->
             <div>
@@ -29,6 +28,9 @@
             
             <div></div>
         </div>
+        
+        <app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form>
+
     </div>
     <div class="col-md-1"></div>
 </div>
@@ -40,7 +42,7 @@
 
 
 
-<app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form>
+
 
 
 
