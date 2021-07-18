@@ -5,10 +5,16 @@
         <p>Published {{ quote.publishedDate|timeAgo }}</p>
     </div>
     
-    <div>
+    <div class="row" style="display: flex; flex-direction: row;" >
         <button (click)='quoteDelete(true)'>Delete Qoute</button>
         <div class="row">
             <button>upvote</button>
+            <p>3 vote</p>
+        </div>
+
+        <div class="row">
+            <button>downvote</button>
+            <p>0 vote</p>
         </div>
     </div>
 </div>
