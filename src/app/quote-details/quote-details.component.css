@@ -1,0 +1,11 @@
+#delete, #upvote, #downvote{
+    cursor: pointer;
+}
+
+#delete:hover, #upvote:hover, #downvote:hover{
+    border: 2px solid rgba(58, 68, 39, 1);
+    padding: 5px;
+    border-radius: 5px;
+    align-items: center; text-align: center;
+    background-color: rgba(148, 52, 54, 0.1);
+}
