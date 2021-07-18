@@ -1,17 +1,48 @@
-<h2> <span style="color: rgba(148, 52, 54, 1);">my</span><span>Quote</span> </h2>
-<div class="container row"  *ngFor='let quote of quotes; let i= index'>
-    <div class="col-md-2"></div>
-    <div class="col-md-5">
-        <p> "{{ quote.theQuote }}" </p>
-        <app-quote-details  [quotes]='quotes' (isDelete)='toDelete($event,i)'></app-quote-details>
+<header>
+    <div class="container">
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+            <h2> <span style="color: rgba(148, 52, 54, 1); font-family: 'Caveat', cursive;">my</span><span style="color: rgba(58, 68, 39, 1); font-family: 'Caveat', cursive;">Quote</span> </h2>
+        </div>
+        <div class="col-md-8"></div>
     </div>
+</header>
+
+<hr style="color: rgba(148, 52, 54, 1);">
+
+<div class="container">
+    <div class="col-md-1"></div>
     <div class="col-md-3">
-        <h5>Author: {{ quote.author }} </h5>
-        <h5>Posted by: {{ quote.name }} </h5>
-        <p>Published: {{ quote.publishedDate|timeAgo }} </p>
+        <img src="./src/assets/mahatmac.png" alt="">
     </div>
-    <div class="col-md-2"></div>
+    <div class="col-md-5">
+        <div class="container"  *ngFor='let quote of quotes; let i= index'>
+            <div>
+                <p> "{{ quote.theQuote }}" </p>
+
+                
+            </div>
+            <div>
+                
+                <app-quote-details  [quotes]='quotes' (isDelete)='toDelete($event,i)'></app-quote-details>
+            </div>
+            <div class="col-md-3">
+                <h5>Author: {{ quote.author }} </h5>
+                <h5>Posted by: {{ quote.name }} </h5>
+                <p>Published: {{ quote.publishedDate|timeAgo }} </p>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
 </div>
+
+
+
+
+
+
+
 
 <app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form>
 
