@@ -1,18 +1,17 @@
+
+
 <div class="container row">
-    <div *ngFor='let quote of quotes; let i= index' style="line-break: 1em;">
-        <p>Author: {{ quote.author }} </p>
-        <p>Posted by {{ quote.name }} </p>
-        <p>Published {{ quote.publishedDate|timeAgo }}</p>
-    </div>
-    
-    <div class="row" style="display: flex; flex-direction: row;" >
-        <button (click)='quoteDelete(true)'>Delete Qoute</button>
-        <div class="row">
+   
+    <div class=" container row" >
+        <div class="col-md-2">
+            <i (click)='quoteDelete(true)' class="fa fa-trash"></i>
+        </div>
+        <div class="row col-md-5">
             <button>upvote</button>
             <p>3 vote</p>
         </div>
 
-        <div class="row">
+        <div class="row col-md-5">
             <button>downvote</button>
             <p>0 vote</p>
         </div>

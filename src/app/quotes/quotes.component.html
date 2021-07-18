@@ -12,7 +12,7 @@
 <div class="container row">
     <div class="col-md-1"></div>
     <div class="col-md-3">
-        <img src="./assets/mahatmac.png" alt="I was here" width="100%">
+        <img src="./assets/mahatmac.png" alt="Mahatma Gadhi gave inspirational quotes" width="100%">
     </div>
     <div class="col-md-6" style="border-left: 3px solid rgba(148, 52, 54, 1);">
         <div *ngFor='let quote of quotes; let i= index'>
@@ -21,9 +21,14 @@
                 <h2> "{{ quote.theQuote }}" </h2>
             </div>
 
+            <div style="line-break: 1em;">
+                <p><span style="font-weight: bolder;">Author:</span> {{ quote.author }} </p>
+                <p>Posted by {{ quote.name }} </p>
+                <p>Published {{ quote.publishedDate|timeAgo }}</p>
+            </div>
+
             <div class="row">
                 <app-quote-details  [quotes]='quotes' (isDelete)='toDelete($event,i)'></app-quote-details>
-
             </div>
             
             <div></div>
