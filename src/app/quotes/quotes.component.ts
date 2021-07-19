@@ -11,7 +11,8 @@ export class QuotesComponent implements OnInit {
   constructor() { }
 
   quotes: Quote[]= [
-    new Quote('Robert Maina', 'The way to get started is to quit talking and begin doing.', 'Walt Disney', new Date(2021,3,14))
+    new Quote('Robert Maina', 'The way to get started is to quit talking and begin doing.', 'Walt Disney', new Date(2021,7,14)),
+    new Quote('James Maina', 'If we continue to behave normally, the disease will treat us abnormally.', 'Mutahi Kagwe', new Date(2020,3,14))
   ];
 
   toDelete(isDelete:any, index:any) {

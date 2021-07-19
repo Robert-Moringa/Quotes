@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { TimeAgoPipe } from './time-ago.pipe';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { VoteQuoteComponent } from './vote-quote/vote-quote.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { VoteQuoteComponent } from './vote-quote/vote-quote.component';
     QuoteFormComponent,
     TimeAgoPipe,
     QuoteDetailsComponent,
-    VoteQuoteComponent
+    VoteQuoteComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
